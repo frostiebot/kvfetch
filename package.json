@@ -1,8 +1,7 @@
 {
-  "name": "kv-server-client",
+  "name": "kvfetch",
   "version": "0.0.1",
-  "description": "A simple Key/Value Server and Client interface",
-  "main": "index.js",
+  "description": "A very, very simple persistent key/value store with an HTTP interface.",
   "author": "Chris Ashurst",
   "license": "MIT",
   "scripts": {
