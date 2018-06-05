@@ -1,0 +1,33 @@
+{
+  "name": "kv-server-client",
+  "version": "0.0.1",
+  "description": "A simple Key/Value Server and Client interface",
+  "main": "index.js",
+  "author": "Chris Ashurst",
+  "license": "MIT",
+  "scripts": {
+    "dev": "babel-node src/index.js",
+    "build": "babel src -d lib",
+    "test": "NODE_ENV=test mocha ./test",
+    "test:watch": "NODE_ENV=test mocha ./test --watch",
+    "test:coverage": "NODE_ENV=test nyc --reporter=html --reporter=text mocha ./test",
+    "start": "yarn build && sudo node ./server.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.1",
+    "sinon": "^5.0.10",
+    "sinon-chai": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "flat-cache": "^1.3.0"
+  }
+}

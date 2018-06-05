@@ -1,0 +1,7 @@
+store.dat
+lib
+coverage
+node_modules
+.nyc_output
+.vscode
+*.log
