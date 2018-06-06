@@ -1,12 +1,14 @@
 const http = require('http')
 
-const store = require('./lib/store').default
-const createStoreServer = require('./lib/server').default
+const createStore = require('./lib/store').default
+const createApp = require('./lib/server').default
 
-const app = createStoreServer(store)
-const server = http.createServer(app)
+const operations = require('./lib/operations').default
 
-server.listen(80)
+const store = createStore(operations)
+const app = createApp(store)
+
+http.createServer(app).listen(80)
 
 //eslint-disable-next-line
 console.log('Server started on http://localhost:80... hit Ctrl+C to exit')

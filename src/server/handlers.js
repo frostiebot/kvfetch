@@ -4,7 +4,7 @@
  *
  * @param {Object} store
  */
-const createStoreHandlers = store => {
+const createAppHandlers = store => {
   /**
    * Handles fetching an item for the given `key` route parameter
    * and places it into `res.locals` before calling `next` to continue
@@ -62,4 +62,4 @@ const createStoreHandlers = store => {
   return { handlePrefetchItem, handleGetItem, handlePutItem }
 }
 
-export default createStoreHandlers
+export default createAppHandlers

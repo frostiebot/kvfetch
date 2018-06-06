@@ -1,6 +1,9 @@
-import createStoreServer from './server'
-import store from './store'
+import createStore from './store'
+import createApp from './server'
 
-const server = createStoreServer(store)
+import operations from './operations'
+
+const store = createStore(operations)
+const server = createApp(store)
 
 server.listen(4000)

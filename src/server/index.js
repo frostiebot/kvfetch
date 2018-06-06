@@ -1,13 +1,13 @@
 import app from './app'
-import createStoreHandlers from './handlers'
+import createAppHandlers from './handlers'
 
 /**
  * Returns an express application object ready to be started with `app.listen`
  *
  * @param {Object} store
  */
-const createStoreServer = store => {
-  const { handlePrefetchItem, handleGetItem, handlePutItem } = createStoreHandlers(store)
+const createApp = store => {
+  const { handlePrefetchItem, handleGetItem, handlePutItem } = createAppHandlers(store)
 
   app
     .route('/:key')
@@ -18,4 +18,4 @@ const createStoreServer = store => {
   return app
 }
 
-export default createStoreServer
+export default createApp

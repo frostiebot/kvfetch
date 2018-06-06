@@ -5,8 +5,8 @@
   "author": "Chris Ashurst",
   "license": "MIT",
   "scripts": {
-    "dev": "babel-node src/index.js",
-    "build": "babel src -d lib",
+    "dev": "NODE_ENV=development babel-node src/index.js",
+    "build": "rimraf lib && babel src -d lib",
     "test": "NODE_ENV=test mocha ./test",
     "test:watch": "NODE_ENV=test mocha ./test --watch",
     "test:coverage": "NODE_ENV=test nyc --reporter=html --reporter=text mocha ./test",

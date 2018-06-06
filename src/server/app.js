@@ -1,5 +1,11 @@
 import express, { urlencoded } from 'express'
 
+/**
+ * We don't test this module because it would be silly to test an
+ * express Application object ourselves when express does it for
+ * themselves.
+ */
+
 const app = express()
 
 app.use(urlencoded({

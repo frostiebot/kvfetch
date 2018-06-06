@@ -1,10 +1,10 @@
 import sinon from 'sinon'
 
-import createStoreHandlers from '../../src/server/handlers'
+import createAppHandlers from '../../src/server/handlers'
 
 let sandbox, fixtures, store
 
-describe('handlers', function () {
+describe('handlers', () => {
 
   beforeEach(() => {
     fixtures = {}
@@ -25,7 +25,7 @@ describe('handlers', function () {
     let handlePrefetchItem
 
     beforeEach(() => {
-      handlePrefetchItem = createStoreHandlers(store).handlePrefetchItem
+      handlePrefetchItem = createAppHandlers(store).handlePrefetchItem
 
       fixtures.req = { params: { key: 'toast' } }
       fixtures.res = { locals: {} }
@@ -66,7 +66,7 @@ describe('handlers', function () {
     let handleGetItem
 
     beforeEach(() => {
-      handleGetItem = createStoreHandlers(store).handleGetItem
+      handleGetItem = createAppHandlers(store).handleGetItem
 
       fixtures.res = {
         locals: { item: {} },
@@ -108,7 +108,7 @@ describe('handlers', function () {
     let handlePutItem
 
     beforeEach(() => {
-      handlePutItem = createStoreHandlers(store).handlePutItem
+      handlePutItem = createAppHandlers(store).handlePutItem
 
       fixtures.req = {
         get: sandbox.stub(),
